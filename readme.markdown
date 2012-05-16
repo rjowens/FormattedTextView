@@ -1,3 +1,3 @@
 ### FormattedTextView
 
-Uses core data to display formatted text.
+Uses CoreText to display formatted text.
