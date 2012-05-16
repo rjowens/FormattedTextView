@@ -1,6 +1,9 @@
 class FormattedTextView < UIScrollView
+
 	attr_accessor :formattedText
-	attr_accessor :textHeight
+	attr_reader :textHeight
+	attr_accessor :padding
+	
 	def initWithFrame(frame)
 		if super
 			@padding = [0,0,0,0]
@@ -18,17 +21,17 @@ class FormattedTextView < UIScrollView
 		renderText
 	end
 
-	def setPadding(padding)
+	def padding=(padding)
 		if @padding.kind_of?(Array) && @padding.count == 4
 			@padding = padding
 		else
-			$stderr.puts "Error expected padding to be [top, right, bottom, left]" 
+			$stderr.puts "Error, expected padding to be [top, right, bottom, left]" 
 		end
 		if @formattedText
 			renderText
 		end
 	end
-
+	  
 	def renderText
  		attrStr = FormattedTextHelper::createAttributedString(@formattedText)	
  		framesetter = CTFramesetterCreateWithAttributedString(attrStr)
@@ -41,7 +44,7 @@ class FormattedTextView < UIScrollView
  		@textLayer.string = attrStr
 		@textLayer.frame = [[@padding[3],@padding[0]], [frame.size.width - @padding[1] - @padding[3], suggestedSize.height]]
 		@textHeight = suggestedSize.height + @padding[0] + @padding[2]
- 		self.setContentSize([frame.size.width, suggestedSize.height])
+ 		self.setContentSize([frame.size.width, suggestedSize.height + @padding[0] + @padding[2]])
 	end
 
 end

@@ -13,7 +13,7 @@ module FormattedTextHelper
 
 	 	  ctFont = CTFontCreateWithName(font, size, nil);
 			attributes = {
-				KCTFontAttributeName => ctFont,
+        KCTFontAttributeName => ctFont,
 				KCTForegroundColorAttributeName => ColorHelper::rgbaStringToUIColor(color).CGColor
 			} 		
 
