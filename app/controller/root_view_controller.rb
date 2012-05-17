@@ -1,10 +1,10 @@
 class RootViewController < UIViewController
 
-	def viewDidLoad
-		self.view.backgroundColor = ColorHelper::rgbaStringToUIColor("rgba(213,222,217,1)")
-		self.tabBarItem = UITabBarItem.alloc.initWithTitle("Method 1", image:nil, tag:0)
+  def viewDidLoad
+    self.view.backgroundColor = ColorHelper::rgbaStringToUIColor("rgba(213,222,217,1)")
+    self.tabBarItem = UITabBarItem.alloc.initWithTitle("Method 1", image:nil, tag:0)
 
-		self.view.addSubview begin
+    self.view.addSubview begin
       @ftv = FormattedTextView.alloc.initWithFrame([[10, 20], [self.view.bounds.size.width - 20, self.view.size.height - 20]])
       @ftv.layer.cornerRadius = 2
 		  @ftv.backgroundColor = UIColor.whiteColor
@@ -14,7 +14,7 @@ class RootViewController < UIViewController
       @ftv.layer.borderColor = ColorHelper::rgbaStringToUIColor("rgba(124,106,81,1)").CGColor
       @ftv.layer.borderWidth = 1.0
       @ftv
-		end
+    end
 
     self.view.addSubview begin
       @ftv2 = FormattedTextView.alloc.initWithFrame([[10, @ftv.frame.origin.y + @ftv.frame.size.height + 15], [self.view.bounds.size.width - 20, self.view.size.height - 20]])
@@ -54,6 +54,5 @@ deserunt mollit anim id est laborum.
       @ftv3.layer.borderWidth = 1.0
       @ftv3
     end
-
   end
 end
