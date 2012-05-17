@@ -11,8 +11,8 @@ module FormattedTextHelper
     matchdata.each_with_index do |match, index|
       font, size, color =  match[0]
 
-	 	  ctFont = CTFontCreateWithName(font, size, nil);
-	 	  attributes = {
+   	  ctFont = CTFontCreateWithName(font, size, nil);
+   	  attributes = {
         KCTFontAttributeName => ctFont,
         KCTForegroundColorAttributeName => ColorHelper::rgbaStringToUIColor(color).CGColor
       } 		

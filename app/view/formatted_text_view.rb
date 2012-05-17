@@ -28,7 +28,7 @@ class FormattedTextView < UIScrollView
 	    $stderr.puts "Error, expected padding to be [top, right, bottom, left]" 
     end
     if @formattedText
-	    renderText
+      renderText
     end
   end
 	  

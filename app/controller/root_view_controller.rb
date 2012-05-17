@@ -7,10 +7,10 @@ class RootViewController < UIViewController
     self.view.addSubview begin
       @ftv = FormattedTextView.alloc.initWithFrame([[10, 20], [self.view.bounds.size.width - 20, self.view.size.height - 20]])
       @ftv.layer.cornerRadius = 2
-		  @ftv.backgroundColor = UIColor.whiteColor
-		  @ftv.padding= [10,10,10,10]
-		  @ftv.formattedText = "{@AmericanTypewriter:16:rgba(0,0,0,1.0)}Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-		  @ftv.frame = [@ftv.frame.origin, [@ftv.frame.size.width, @ftv.textHeight]]
+      @ftv.backgroundColor = UIColor.whiteColor
+      @ftv.padding= [10,10,10,10]
+      @ftv.formattedText = "{@AmericanTypewriter:16:rgba(0,0,0,1.0)}Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      @ftv.frame = [@ftv.frame.origin, [@ftv.frame.size.width, @ftv.textHeight]]
       @ftv.layer.borderColor = ColorHelper::rgbaStringToUIColor("rgba(124,106,81,1)").CGColor
       @ftv.layer.borderWidth = 1.0
       @ftv
