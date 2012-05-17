@@ -35,8 +35,8 @@ class RootViewController < UIViewController
       @ftv3.backgroundColor = UIColor.whiteColor
       @ftv3.padding= [10,10,10,10]
       @ftv3.formattedText = <<-eos
-    {@AmericanTypewriter:16:rgba(128,0,0,1.0)}Lorem ipsum{@AmericanTypewriter:16:rgba(0,0,0,1.0)}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor \
+    {@AmericanTypewriter:16:rgba(128,0,0,1.0)}Lorem ipsum{@AmericanTypewriter:16:rgba(0,0,0,1.0)} \
+dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor \
 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud \
 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute \
 irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla \ 
